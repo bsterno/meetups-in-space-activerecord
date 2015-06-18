@@ -1,0 +1,13 @@
+<h1><%= @title %></h1>
+
+
+<h2>Meetups:</h2>
+<% meetups.each do |meetup| %>
+<ul>
+  <li>
+    <strong><%= meetup.name %></strong><br>
+    Location: <%= meetup.location %><br>
+    Description: <%= meetup.description %>
+  </li>
+</ul>
+<% end %>
