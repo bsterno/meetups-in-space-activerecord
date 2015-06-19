@@ -15,6 +15,8 @@ if Sinatra::Base.development? || Sinatra::Base.test?
   Meetup.create(name: 'BRG', location: 'thoughbot hq', description: 'fun times')
   Meetup.create(name: 'LA fun time', location: 'mission control', description: 'launch votes & fun times')
   Meetup.create(name: 'TechJam', location: 'city hall plaza', description: 'not fun times')
+  Meetup.create(name: 'Spacey Meetup', location: 'space', description: 'meetup in spaceeeee')
+
 
   Attendee.create(user_id: 2, meetup_id: 1)
   Attendee.create(user_id: 3, meetup_id: 1)

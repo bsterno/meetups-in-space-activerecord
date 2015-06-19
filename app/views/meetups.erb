@@ -1,0 +1,36 @@
+<a href="/view_all">View All Meetups</a>
+
+<h2>Meetups:</h2>
+  <ul>
+    <li>
+      <strong><%= meetup.name %></strong><br>
+      Location: <%= meetup.location %><br>
+      Description: <%= meetup.description %>
+    </li>
+  </ul>
+
+
+<h2>Attendees:</h2>
+  <ol>
+    <% attendees.each do |attendee| %>
+    <li><%= attendee.user.username %><img src="<%= attendee.user.avatar_url %>"</li>
+    <% end %>
+  </ol>
+
+  <br>
+
+  <div id="form-box">
+    <form action="/meetups/<%= meetup.id %>" method="post">
+      <label for="attendee">Would you like to join this Meetup?</label>
+      <input type="submit" id="attendee" name ="attendee" value="Add Meetup">
+    </form>
+  </div>
+
+  <div id="form-box">
+    <form action="/meetups/<%= meetup.id %>/remove" method="post">
+      <label for="attendee">I am no longer attending this Meetup</label>
+      <input type="submit" id="attendee" name ="attendee" value="Remove Meetup">
+    </form>
+  </div>
+
+  <br>
